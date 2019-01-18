@@ -41,7 +41,7 @@ namespace TextEditor
         public MainForm()
         {
             InitializeComponent();
-            butOpenFile.Click += butOpenFile_Click; // butOpenFile кнопка открытия файла добавляем ее событие 
+            butOpenFile.Click += new EventHandler(butOpenFile_Click); // butOpenFile кнопка открытия файла добавляем ее событие 
             // Click далее += и нажимаем клавишу tab и среда VS создаст нам как обработчик события так и 
             // подвяжет его к этому событию. 
             // аналогично оформляем подписку на дугие события: 

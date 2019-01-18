@@ -48,12 +48,14 @@ namespace TextEditor.BL
             SaveContent(content, filePath, _defaultEncoding); 
         }
 
+        
         public void SaveContent(string content, string filePath, Encoding encoding)
         {
-            File.WriteAllText(content, filePath, _defaultEncoding); 
+            File.WriteAllText(filePath, content, encoding); 
         }
 
-        
+
+
         public int GetSymbolCount(string content)
         {
             int count = content.Length;

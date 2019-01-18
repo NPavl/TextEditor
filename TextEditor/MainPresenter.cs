@@ -20,11 +20,11 @@ namespace TextEditor
             _manager = manager;
             _messageService = messageService;
 
-            _view.SetSymbolCount(0); 
+            _view.SetSymbolCount(0);
 
-            _view.ContentChanged += _view_ContentChanged;
-            _view.FileOpenClick += _view_FileOpenClick;
-            _view.FileSaveClick += _view_FileSaveClick;
+            _view.ContentChanged += new EventHandler(_view_ContentChanged);
+            _view.FileOpenClick += new EventHandler(_view_FileOpenClick);
+            _view.FileSaveClick += new EventHandler(_view_FileSaveClick);
 
         }
 
